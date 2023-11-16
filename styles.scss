@@ -57,11 +57,12 @@ body::after {
     display: grid;
     grid-template-columns: 25% auto;
     grid-template-rows: 400px auto;
-    gap: 10px;
+    row-gap: 10px;
     > aside {
         grid-column: 1;
-        grid-row: 1 / -1; 
-        padding: 10px;
+        grid-row: 1 / 6; 
+        padding: 30px;
+        background-color: black;
         .wrapper{
             display: flex;
             flex-direction: column;
@@ -78,11 +79,10 @@ body::after {
     >  .main {
         grid-column: 2/3;
         grid-row: 2 / 6; 
-        padding-right: 50px;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 450px 150px 500px; 
-        gap: 10px;
+        row-gap: 10px;
         > .explanation,
         > .participation,
         > .benefits,
@@ -140,9 +140,8 @@ body::after {
         display: grid;
         grid-template-columns: 30% auto;
         grid-template-rows: 150px 300px;
-        gap: 10px; 
-        padding: 10px;
-        padding-right: 30px;
+        row-gap: 10px; 
+        padding: 30px;
       
         > header {
           grid-column: 1 / -1; 

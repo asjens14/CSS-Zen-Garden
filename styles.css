@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #112C36;
+  color: #8df4ff;
 }
 
 @keyframes moveGradient {
@@ -30,6 +30,10 @@ a:hover {
     background-position: 100% 50%;
   }
 }
+#zen-supporting [role=article] {
+  padding: 20px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -53,7 +57,7 @@ a:hover {
 }
 
 .text-dark {
-  background-color: #112C36;
+  background-color: #8df4ff;
 }
 
 body {
@@ -83,12 +87,13 @@ body::after {
   display: grid;
   grid-template-columns: 25% auto;
   grid-template-rows: 400px auto;
-  gap: 10px;
+  row-gap: 10px;
 }
 .page-wrapper > aside {
   grid-column: 1;
-  grid-row: 1/-1;
-  padding: 10px;
+  grid-row: 1/6;
+  padding: 30px;
+  background-color: black;
 }
 .page-wrapper > aside .wrapper {
   display: flex;
@@ -103,11 +108,10 @@ body::after {
 .page-wrapper > .main {
   grid-column: 2/3;
   grid-row: 2/6;
-  padding-right: 50px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 450px 150px 500px;
-  gap: 10px;
+  row-gap: 10px;
 }
 .page-wrapper > .main > .explanation,
 .page-wrapper > .main > .participation,
@@ -159,9 +163,8 @@ body::after {
   display: grid;
   grid-template-columns: 30% auto;
   grid-template-rows: 150px 300px;
-  gap: 10px;
-  padding: 10px;
-  padding-right: 30px;
+  row-gap: 10px;
+  padding: 30px;
 }
 .page-wrapper > .intro > header {
   grid-column: 1/-1;
