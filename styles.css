@@ -22,6 +22,14 @@ a:hover {
   color: #112C36;
 }
 
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -49,7 +57,7 @@ a:hover {
 }
 
 body {
-  background-image: url("./src/rain.png");
+  background-image: url("./src/rain.jpg");
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
@@ -65,7 +73,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   pointer-events: none;
   z-index: -1;
 }
@@ -123,22 +131,24 @@ body::after {
   grid-column: 1/3;
   grid-row: 3/4;
 }
-.page-wrapper > .main > footer.boundary {
+.page-wrapper > .main footer.boundary {
   grid-column: 1/3;
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  background: linear-gradient(to right, #8beaff, #2193b0);
+  background: linear-gradient(to right, #155462, #2193b0, #155462, #2193b0);
+  background-size: 400% 400%;
   color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-top: 3px solid #fff;
+  animation: moveGradient 10s linear infinite;
 }
-.page-wrapper > .main > footer.boundary a {
+.page-wrapper > .main footer.boundary a {
   color: white;
   text-decoration: none;
   transition: color 0.08s, transform 0.12s;
 }
-.page-wrapper > .main > footer.boundary a:hover {
+.page-wrapper > .main footer.boundary a:hover {
   color: #ccfcff;
   text-decoration: underline;
   transform: scale(1.2);
@@ -219,6 +229,42 @@ body::after {
   .page-wrapper > .intro .preamble {
     grid-row: 3;
   }
+}
+
+/*ANIMATIONS*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+#zen-intro h1, #zen-intro h2 {
+  animation-name: fadeIn, slideIn, shake;
+  animation-duration: 1.5s, 1.5s, 0.5s;
+  animation-timing-function: ease-out, ease-out, linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 0s, 2s;
 }
 
 /*# sourceMappingURL=styles.css.map */
