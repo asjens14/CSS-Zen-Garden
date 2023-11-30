@@ -31,7 +31,7 @@ a:hover {
   }
 }
 #zen-supporting [role=article] {
-  padding: 20px;
+  padding: 35px;
 }
 
 * {
@@ -86,7 +86,7 @@ body::after {
   color: #D9F3F6;
   display: grid;
   grid-template-columns: 25% auto;
-  grid-template-rows: 400px auto;
+  grid-template-rows: 420px auto;
   row-gap: 10px;
 }
 .page-wrapper > aside {
@@ -165,6 +165,7 @@ body::after {
   grid-template-rows: 150px 300px;
   row-gap: 10px;
   padding: 30px;
+  margin-bottom: 20px;
 }
 .page-wrapper > .intro > header {
   grid-column: 1/-1;
@@ -178,9 +179,18 @@ body::after {
   grid-column: 2;
   grid-row: 2;
 }
-@media (max-width: 850px) {
+@media (min-width: 751px) {
+  .page-wrapper .page-wrapper {
+    line-height: 2.5;
+    grid-template-rows: none;
+  }
+}
+@media (max-width: 750px) {
   .page-wrapper {
     grid-template-columns: 1fr;
+  }
+  .page-wrapper .page-wrapper {
+    line-height: 3;
   }
   .page-wrapper > aside,
   .page-wrapper > .main,
