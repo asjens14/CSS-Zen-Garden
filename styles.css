@@ -93,7 +93,7 @@ body::after {
   grid-column: 1;
   grid-row: 1/6;
   padding: 30px;
-  background-color: black;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
 }
 .page-wrapper > aside .wrapper {
   display: flex;
