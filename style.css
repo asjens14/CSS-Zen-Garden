@@ -1,214 +1,278 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-/* finding the boundaries of each element */
-.boundary {
-	border: 1px solid black;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Libre+Baskerville&display=swap");
+h1 {
+  font-family: "Comfortaa", serif;
+  font-weight: bold;
 }
 
-.red{
-	background-color: #ff828273;
-}
-.orange{
-	background-color: #f4971573;
-}
-.yellow{
-	background-color: #fbff8273;
-}
-.green{
-	background-color: #82ff9173;
-}
-.blue{
-	background-color: #aa82ff73;
+h2, h3, h4 {
+  font-family: "Comfortaa", serif;
 }
 
-/* basic elements */
-html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
-
-
-/* specific divs */
-.page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header {
-	padding-top: 20px;
-	height: 87px;
+p {
+  font-family: "Libre Baskerville", sans-serif;
 }
 
-.summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #72B0C0;
+}
 
-.preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+a:hover {
+  color: #8df4ff;
+}
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+#zen-supporting [role=article] {
+  padding: 35px;
+}
 
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+* {
+  box-sizing: border-box;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+.swatch {
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
+.primary {
+  background-color: #D9F3F6;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
+.accent1 {
+  background-color: #72B0C0;
+}
 
+.accent2 {
+  background-color: #4C8DA1;
+}
 
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
+.text-dark {
+  background-color: #8df4ff;
+}
 
+body {
+  background-image: url("./src/rain.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
 
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+body::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.page-wrapper {
+  color: #D9F3F6;
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: auto;
+  row-gap: 10px;
+}
+.page-wrapper > aside {
+  grid-column: 1;
+  grid-row: 1/6;
+  padding: 30px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+.page-wrapper > aside .wrapper {
+  row-gap: 20px;
+}
+.page-wrapper > aside .wrapper > .design-selection li,
+.page-wrapper > aside .wrapper > .design-archives li,
+.page-wrapper > aside .wrapper > .zen-resources li {
+  margin-bottom: 15px;
+}
+.page-wrapper > .main {
+  grid-column: 2/3;
+  grid-row: 2/6;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 450px 150px 500px;
+  row-gap: 10px;
+}
+.page-wrapper > .main > .explanation,
+.page-wrapper > .main > .participation,
+.page-wrapper > .main > .benefits,
+.page-wrapper > .main > .requirements {
+  padding: 10px;
+}
+.page-wrapper > .main > .explanation {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.page-wrapper > .main > .participation {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.page-wrapper > .main > .benefits {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.page-wrapper > .main > .requirements {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+.page-wrapper > .main footer {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: linear-gradient(to right, #155462, #2193b0, #155462, #2193b0);
+  background-size: 400% 400%;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-top: 3px solid #fff;
+  animation: moveGradient 10s linear infinite;
+}
+.page-wrapper > .main footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.08s, transform 0.12s;
+}
+.page-wrapper > .main footer a:hover {
+  color: #ccfcff;
+  text-decoration: underline;
+  transform: scale(1.2);
+}
+.page-wrapper > .intro {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 150px 300px;
+  row-gap: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.page-wrapper > .intro > header {
+  grid-column: 1/-1;
+  grid-row: 1;
+}
+.page-wrapper > .intro > .summary {
+  grid-column: 1;
+  grid-row: 2;
+}
+.page-wrapper > .intro > .preamble {
+  grid-column: 2;
+  grid-row: 2;
+}
+@media (min-width: 751px) {
+  .page-wrapper .page-wrapper {
+    line-height: 2.5;
+    grid-template-rows: none;
+  }
+}
+@media (max-width: 750px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .page-wrapper > aside,
+  .page-wrapper > .main,
+  .page-wrapper > .intro {
+    grid-column: 3;
+    padding-right: 10px;
+  }
+  .page-wrapper > aside {
+    grid-row: 2;
+  }
+  .page-wrapper > .main {
+    grid-row: 3;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+  .page-wrapper > .main > .explanation,
+  .page-wrapper > .main > .participation,
+  .page-wrapper > .main > .benefits,
+  .page-wrapper > .main > .requirements,
+  .page-wrapper > .main > footer {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .page-wrapper > .main > footer {
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .page-wrapper > .main > footer a:hover {
+    transform: scale(1);
+  }
+  .page-wrapper > .intro {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .page-wrapper > .intro > header,
+  .page-wrapper > .intro > .summary,
+  .page-wrapper > .intro > .preamble {
+    grid-column: 1;
+  }
+  .page-wrapper > .intro header {
+    grid-row: 1;
+  }
+  .page-wrapper > .intro .summary {
+    grid-row: 2;
+  }
+  .page-wrapper > .intro .preamble {
+    grid-row: 3;
+  }
+}
+
+/*ANIMATIONS*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+#zen-intro h1, #zen-intro h2 {
+  animation-name: fadeIn, slideIn, shake;
+  animation-duration: 1.5s, 1.5s, 0.5s;
+  animation-timing-function: ease-out, ease-out, linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 0s, 2s;
+}
+
+/*# sourceMappingURL=style.css.map */
